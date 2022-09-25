@@ -1,5 +1,88 @@
 @import "reset/reset.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 
-body {
-    background-color: antiquewhite;
+//  Variables
+$Primaire :#9356DC;
+$Secondaire:#FF79DA;
+$Tertiare:#99E2D0;
+$GrisClaireLocal:rgb(234, 234, 234);
+$ShadowTop:-1px -6px 9px 2px rgba(0,0,0,0.49); 
+$Titres: 'Shrikhand', cursive;
+$Texte: 'Roboto', sans-serif;
+//  Partie du Header
+
+header {
+
+    .imageHeader {
+
+         display: flex;
+         justify-content: center;
+         align-items: center;
+            
+         img {
+             padding: 4% 0;
+             width: 40%;
+                
+        }  
+     }    
+       
+}
+
+// Partie localisation avec Paris, Belleville
+
+.parentLocalisation {
+
+    width: 100%;
+    padding: 5% 0% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $GrisClaireLocal;
+    box-shadow: inset 0px 2px 5px 2px rgba(0,0,0,0.09);
+
+        .logoLocal {
+            padding-right: 4%;
+            margin-left: -6%;
+        }
+
+        .texteLocal {
+            font-weight: bold;
+            font-family: $Texte;
+        }
+}
+
+// Partie Exploration Restaurant 
+
+.parentReservation {
+    height: auto;
+    padding-top: 8%;
+    padding-bottom: 17%;
+    text-align: center;
+    background-color: rgb(246, 246, 246);
+        .titreReservation {
+            padding: 2% 16%;
+            font-size: 15px;
+            font-weight: 900;
+            font-family: $Texte;
+        }
+        .infoReservation {
+            font-family: $Texte;
+            padding: 1% 4%;
+        }
+
+        .parentBoutonExplorer {
+            margin-top: 12%;
+            
+                .boutonExplorer {
+                    background: radial-gradient(at -90% -100%, $Secondaire 50%, $Primaire 100%);
+                    padding: 4.5% 6%;
+                    margin-top: 5%;
+                    border-radius: 33px;
+                    font-family: $Texte;
+                    text-decoration: none;
+                    color: #FFF;
+
+                }
+        }
+            
 }
