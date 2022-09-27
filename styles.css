@@ -39,11 +39,46 @@ td, th {
   padding: 0;
 }
 
-header .imageHeader {
+.boutonDeguster .numeroDeguster, .boutonComposer .numeroComposer, .boutonChoisir .numeroChoisir, .parentLocalisation, header .imageHeader {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.boutonDeguster, .boutonComposer, .boutonChoisir {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  background-color: rgb(246, 246, 246);
+  width: 85%;
+  height: 4.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0px 13px 17px -8px rgba(150, 150, 150, 0.29);
+  margin-bottom: 5%;
+}
+
+.boutonDeguster .numeroDeguster, .boutonComposer .numeroComposer, .boutonChoisir .numeroChoisir {
+  border-radius: 50%;
+  margin-left: -0.6rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #9356DC;
+  font-family: "Roboto", sans-serif;
+  color: #FFF;
+}
+
+.boutonDeguster .logoDeguster, .boutonComposer .logoComposer, .boutonChoisir .logoChoisir {
+  width: 60px;
+  padding: 0 8% 0 6%;
+  color: gray;
+}
+
+.boutonDeguster .texteDeguster, .boutonComposer .texteComposer, .boutonChoisir .texteChoisir {
+  width: 76%;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
 header .imageHeader img {
   padding: 4% 0;
   width: 40%;
@@ -52,9 +87,6 @@ header .imageHeader img {
 .parentLocalisation {
   width: 100%;
   padding: 5% 0%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: rgb(234, 234, 234);
   box-shadow: inset 0px 2px 5px 2px rgba(0, 0, 0, 0.09);
 }
@@ -95,6 +127,11 @@ header .imageHeader img {
   font-family: "Roboto", sans-serif;
   text-decoration: none;
   color: #FFF;
+}
+
+.titreFonctionnement {
+  font-family: "Roboto", sans-serif;
+  padding: 9% 5%;
 }
 
 /*# sourceMappingURL=styles.css.map */
