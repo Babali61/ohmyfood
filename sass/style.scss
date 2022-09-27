@@ -6,18 +6,69 @@ $Primaire :#9356DC;
 $Secondaire:#FF79DA;
 $Tertiare:#99E2D0;
 $GrisClaireLocal:rgb(234, 234, 234);
-$ShadowTop:-1px -6px 9px 2px rgba(0,0,0,0.49); 
+$ShadowTop:-1px -6px 9px 2px rgba(0,0,0,0.49);
+$ShadowFonctionnement :0px 13px 17px -8px rgba(150,150,150,0.29);
 $Titres: 'Shrikhand', cursive;
 $Texte: 'Roboto', sans-serif;
+
+%displayFlexCenter {
+
+    display : flex ;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+%BoutonFonctionnement {
+
+    display: flex;
+    align-items: center;
+    margin: auto;
+    background-color: rgb(246, 246, 246);
+    width: 85%;
+    height: 4.5rem;
+    border-radius: 1.2rem;
+    box-shadow: $ShadowFonctionnement;
+    margin-bottom: 5%;
+
+}
+
+%NumeroFonctionnement {
+
+    border-radius: 50%;
+    margin-left: -0.6rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: $Primaire;
+    font-family: $Texte;
+    color: #FFF;
+
+}
+
+%LogoFonctionnement {
+
+    width: 60px;
+    padding: 0 8% 0 6%;
+    color: gray;
+
+}
+
+%TexteBoutonFonctionnement {
+
+    width: 76%;
+    
+    font-family: $Texte;
+    font-weight: bold;
+
+}
+
 //  Partie du Header
 
 header {
 
     .imageHeader {
 
-         display: flex;
-         justify-content: center;
-         align-items: center;
+        @extend %displayFlexCenter;
             
          img {
              padding: 4% 0;
@@ -32,11 +83,9 @@ header {
 
 .parentLocalisation {
 
+    @extend %displayFlexCenter;
     width: 100%;
     padding: 5% 0% ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: $GrisClaireLocal;
     box-shadow: inset 0px 2px 5px 2px rgba(0,0,0,0.09);
 
@@ -59,6 +108,7 @@ header {
     padding-bottom: 17%;
     text-align: center;
     background-color: rgb(246, 246, 246);
+
         .titreReservation {
             padding: 2% 16%;
             font-size: 15px;
@@ -85,4 +135,90 @@ header {
                 }
         }
             
+}
+
+// Partie Fonctionnement
+
+
+.titreFonctionnement {
+
+    font-family: $Texte;
+    padding: 9% 5%;
+
+}
+
+.boutonChoisir{
+
+        @extend %BoutonFonctionnement;
+
+            .numeroChoisir {
+                
+                @extend %displayFlexCenter;
+                @extend %NumeroFonctionnement;
+
+            
+            }
+        
+            .logoChoisir {
+
+            @extend %LogoFonctionnement;
+
+            }
+
+            .texteChoisir {
+
+                @extend %TexteBoutonFonctionnement;
+
+            }
+}
+
+
+.boutonComposer {
+
+        @extend %BoutonFonctionnement;
+
+            .numeroComposer {
+
+                @extend %displayFlexCenter;
+                @extend %NumeroFonctionnement;
+
+            }
+
+            .logoComposer {
+
+                @extend %LogoFonctionnement;
+
+            }
+
+
+            .texteComposer {
+
+                @extend %TexteBoutonFonctionnement;
+
+            }
+}
+
+.boutonDeguster {
+
+        @extend %BoutonFonctionnement;
+
+            .numeroDeguster {
+
+                @extend %displayFlexCenter;
+                @extend %NumeroFonctionnement;
+            }
+
+            .logoDeguster {
+
+                @extend %LogoFonctionnement;
+
+            }
+
+
+            .texteDeguster {
+
+                @extend %TexteBoutonFonctionnement;
+
+            }
+
 }
