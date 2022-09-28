@@ -8,8 +8,11 @@ $Tertiare:#99E2D0;
 $GrisClaireLocal:rgb(234, 234, 234);
 $ShadowTop:-1px -6px 9px 2px rgba(0,0,0,0.49);
 $ShadowFonctionnement :0px 13px 17px -8px rgba(150,150,150,0.29);
+$ShadowRestaurant :0px 13px 17px -8px rgba(0, 0, 0, 0.29);
 $Titres: 'Shrikhand', cursive;
 $Texte: 'Roboto', sans-serif;
+
+// Heritage @extend 
 
 %displayFlexCenter {
 
@@ -18,6 +21,8 @@ $Texte: 'Roboto', sans-serif;
     align-items: center;
     
 }
+
+// Heritage @extend - Partie Fonctionnement
 
 %BoutonFonctionnement {
 
@@ -59,6 +64,18 @@ $Texte: 'Roboto', sans-serif;
     
     font-family: $Texte;
     font-weight: bold;
+
+}
+
+// Heritage @extend - Partie restaurant
+
+
+
+%ImageStyle {
+
+    background-repeat: no-repeat;
+    height: 12rem;
+    border-radius: 1rem 1rem 0 0;
 
 }
 
@@ -220,5 +237,192 @@ header {
                 @extend %TexteBoutonFonctionnement;
 
             }
+
+}
+
+.parentRestaurants {
+    
+    background-color: rgb(243, 242, 242);
+
+            h2 {
+
+                font-size: 1.36rem ;
+                font-weight: 900;
+                font-family: $Texte;
+                padding: 10% 0% 3% 4%;
+
+            }
+}
+
+article {
+
+    
+    width: 90%;
+    margin:3% auto 4% auto;
+    background-color: #FFF;
+    border-radius: 1rem;
+  
+    
+
+        a{
+
+            text-decoration: none;
+            color: #000;
+        }
+}
+
+.restaurant {
+
+    box-shadow: $ShadowFonctionnement;
+    
+
+}
+
+
+.parentNotifImage {
+
+    height: 100%;
+    width: 100%;
+    margin: auto;
+
+
+        .notifNouveau {
+            
+            padding: 1.8% 3%;
+            position: absolute;
+            margin-top: 0.8rem;
+            right: 8%;
+            background-color: #99e2d0;
+            color: #008766;
+            font-family: $Texte;
+            font-weight: 500;
+            border-radius: 3px;
+            
+
+        }
+
+}
+
+.parentDetailsVignette {
+
+    
+    width: 100%;
+    margin: auto;
+    padding: 3% 0% 4% 4%;
+    font-family: $Texte;
+
+          
+
+}
+
+.TitreIcon {
+    display: flex;
+    align-items: center;
+
+        .titreVignette {
+            
+            width: 85%;
+    
+        }
+
+        .iconeCoeur {
+            
+            font-size: x-large;
+            
+        }
+}
+
+.imagePaletteDuGout {
+
+    background-image: url(/images/palette.jpg);
+    background-size: 100% 135%;
+    background-position-y: -4rem;
+    @extend %ImageStyle;
+    
+}
+
+.imageNoteEnchantee {
+
+    background-image: url(/images/note.jpg);
+    background-size: 100% 250%;
+    background-position-y: -11rem;
+    @extend %ImageStyle;
+}
+
+.imageAlaFrancaise {
+
+    background-image: url(/images/francaise.jpg);
+    background-size: 100% 125%;
+    background-position-y: -3rem;
+    @extend %ImageStyle;
+}
+
+.imageDeliceDesSens {
+
+    background-image: url(/images/delice.jpg);
+    background-size: 100% 125%;
+    background-position-y: -3rem;
+    @extend %ImageStyle;
+}
+
+//  Partie Footer
+
+footer {
+
+    background-color: #353535;
+    height: 100%;
+    padding-bottom: 5%;
+
+        .logoFooter {
+
+            font-family: $Titres;
+            font-size: 16px;
+            color: #FFF;
+            padding: 5% 5%;
+        }
+}
+
+.liste {
+    width: 90%;
+    margin: auto;
+}
+
+li {
+
+    margin-bottom: 1%;
+
+        a {
+            font-family: $Texte;
+            font-size: 14px;
+            color: #FFF;
+            text-decoration: none;
+            
+            
+        }
+
+}
+
+.iconeLien {
+
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    
+    
+
+        .iconeFooter {
+            font-size: x-small;
+            padding-right: 2.5%;
+        }
+
+        .iconeFooterDevenir {
+
+            font-size: xx-small;
+            padding-right: 2%;
+        }
+
+        .lienFooter {
+            width: 70%;
+        }
 
 }
