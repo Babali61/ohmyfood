@@ -196,25 +196,25 @@ article a {
 }
 
 .imagePaletteDuGout {
-  background-image: url(/images/palette.jpg);
+  background-image: url(images/palette.jpg);
   background-size: 100% 135%;
   background-position-y: -4rem;
 }
 
 .imageNoteEnchantee {
-  background-image: url(/images/note.jpg);
+  background-image: url(images/note.jpg);
   background-size: 100% 250%;
   background-position-y: -11rem;
 }
 
 .imageAlaFrancaise {
-  background-image: url(/images/francaise.jpg);
+  background-image: url(images/francaise.jpg);
   background-size: 100% 125%;
   background-position-y: -3rem;
 }
 
 .imageDeliceDesSens {
-  background-image: url(/images/delice.jpg);
+  background-image: url(images/delice.jpg);
   background-size: 100% 125%;
   background-position-y: -3rem;
 }
