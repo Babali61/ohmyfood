@@ -141,6 +141,7 @@ article {
     // padding-left: 3%; 
     font-family: $Texte;
     border-radius: 1.1rem;
+          
      
     
 }
@@ -148,7 +149,8 @@ article {
 
 .articleEnfant {
    
-    width: 100%;
+    // width: 100%;
+    height: 4.4rem;
     background-color: #FFF;
     position: relative;
     padding-left: 3%;
@@ -156,6 +158,7 @@ article {
     overflow: hidden;
     border-radius: 1.1rem;
     box-shadow: $ShadowFonctionnement;
+    
 
     &:hover {
 
@@ -171,7 +174,7 @@ article {
     }
 
     .prix {
-        padding-right: 6%;
+        padding-right: 8%;
         margin-left: auto;
         font-weight: bold;
         margin-top: auto;
@@ -184,7 +187,7 @@ article {
 
 .animationArticle {
 
-width: 5rem;
+width: 4.5rem;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -216,24 +219,29 @@ transition: 0.5s;
 
 .detailsTitre {
     
+    width: 87%;
     display: flex;
     flex-direction: column;
-    padding: 1% 0 4% 0%;
+    padding: 4% 9% 4% 0%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
         .details {
 
             overflow: hidden;
             text-overflow: ellipsis;
-            font-size: 0.9rem;
             white-space: nowrap;
-            width: 230px;
-            margin-right: 8%;
-            padding-top: 2%;
+            font-size: 1rem;
+            // padding-top: 2%;
+            margin-top: 1%;
 
         }
 
         h3 {
-            padding: 3.5% 0% 0 0%;
+            
+            max-width: calc(100%);
+            // padding: 3.5% 0% 0 0%;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -241,6 +249,12 @@ transition: 0.5s;
         }
         
 }
+
+
+.test {
+    display: flex;
+}
+
 
 .bouttonCommander {
     display: flex;
@@ -337,12 +351,61 @@ footer {
                 }
         }
 
+        .titreIcon  {
+
+                h1 {
+
+                    padding-left: 20%;
+                    width: 75%;
+
+                }
+
+        }
+
         .menu {
 
             width: 50%;
             margin: auto;
             top: 0;
 
+                    .menuEntrees {
+
+                        h2 {
+                            font-size: larger;
+                            padding-left: 20%;
+                        }
+
+                    }
+
+                    .menuPlats {
+
+                        h2 {
+                            font-size: larger;
+                            padding-left: 20%;
+                        }
+
+                    }
+
+                    .menuDesserts {
+
+                        h2 {
+                            font-size: larger;
+                            padding-left: 20%;
+                        }
+
+                    }
+
+        }
+
+        .bouttonCommander {
+
+                a {
+                    padding: 3.5% 6%;
+                }
+        }
+
+        .bordureBas {
+            margin-left: 20%;
         }
 
         article {
@@ -350,6 +413,11 @@ footer {
             margin-top: 4%;
 
             
+        }
+
+        .articleEnfant {
+            width: 65%;
+            margin: auto;
         }
 
         .detailsTitre {
