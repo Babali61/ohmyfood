@@ -8,97 +8,120 @@
     <title>Ohmyfood</title>
 </head>
 <body>
+    <div class="loader">
+        <div class="logo">Ohmyfood</div>
+        <div class="iconLoader"><i class="fa-solid fa-utensils fa-xl"></i></div>
+    </div>
     <header>
         <div class="imageHeader">
             <img src="images/ohmyfood.png" alt="logo_Ohmyfood">
         </div>
     </header>
     <main>
-        <div class="parentLocalisation">
-            <div class="logoLocal"><i class="fa-solid fa-location-dot"></i></div>
-            <div class="texteLocal">Paris, Belleville</div>
-        </div>
-        <div class="parentReservation">
-            <div class="titreReservation"><h2>Réservez le menu qui vous convient</h2></div>
-            <div class="infoReservation"><p>Découvrez des restaurants d'éxception, séléctionnés par nos soins.</p></div>
-            <div class="parentBoutonExplorer">
-                <a href="#" class="boutonExplorer">Explorer nos restaurants</a>
+        <div class="parentLocalFonct">
+            <div class="LocalReserv">
+                <div class="parentLocalisation">
+                    <div class="logoLocal"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="texteLocal">Paris, Belleville</div>
+                </div>
+                <div class="parentReservation">
+                    <div class="titreReservation"><h2>Réservez le menu qui vous convient</h2></div>
+                    <div class="infoReservation"><p>Découvrez des restaurants d'éxception, séléctionnés par nos soins.</p></div>
+                    <div class="parentBoutonExplorer">
+                        <a href="#" class="boutonExplorer">Explorer nos restaurants</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="parentFonctionnement">
-            <h2 class="titreFonctionnement">Fonctionnement</h2>
-            <div class="boutonChoisir">
-                <div class="numeroChoisir">1</div>
-                <div class="logoChoisir"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                <div class="texteChoisir">Choisissez un restaurant</div>
-            </div>
-            <div class="boutonComposer">
-                <div class="numeroComposer">2</div>
-                <div class="logoComposer"><i class="fa-solid fa-list-ul"></i></div>
-                <div class="texteComposer">Composez votre menu</div>
-            </div>
-            <div class="boutonDeguster">
-                <div class="numeroDeguster">3</div>
-                <div class="logoDeguster"><i class="fa-solid fa-store"></i></div>
-                <div class="texteDeguster">Dégustez au restaurant</div>
+            <div class="parentFonctionnement">
+                <h2 class="titreFonctionnement">Fonctionnement</h2>
+                <div class="boutonFonctionnement">
+                    <div class="numeroFonctionnement">1</div>
+                    <div class="logoFonctionnement"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <div class="texteFonctionnement">Choisissez un restaurant</div>
+                </div>
+                <div class="boutonFonctionnement">
+                    <div class="numeroFonctionnement">2</div>
+                    <div class="logoFonctionnement"><i class="fa-solid fa-list-ul"></i></div>
+                    <div class="texteFonctionnement">Composez votre menu</div>
+                </div>
+
+                <div class="boutonFonctionnement">
+                    <div class="numeroFonctionnement">3</div>
+                    <div class="logoFonctionnement"><i class="fa-solid fa-store"></i></div>
+                    <div class="texteFonctionnement">Dégustez au restaurant</div>
+                </div>
             </div>
         </div>
         <section class="parentRestaurants">
             <h2 class="titreRestaurants">Restaurants</h2>
-            <article class="restaurant">
-                <a href="menuLaPaletteDuGout.html" class="vignettePaletteDuGout">
-                    <div class="parentNotifImage">
-                        <div class="notifNouveau">Nouveau</div>
-                        <div class="imagePaletteDuGout"></div>
-                    </div>
-                    <div class="parentDetailsVignette">
-                        <div class="TitreIcon">
-                            <div class="titreVignette"><h4>La palette du goût</h4></div>
-                            <div class="iconeCoeur"><i class="fa-regular fa-heart"></i></div>
+            <div class="parentArticle">
+                <article class="restaurant">
+                    <a href="menuLaPaletteDuGout.html" class="vignettePaletteDuGout">
+                        <div class="parentNotifImage">
+                            <div class="notifNouveau">Nouveau</div>
+                            <div class="imagePaletteDuGout"></div>
                         </div>
-                            <div class="villeVignette">Ménilmontant</div>
-                    </div>
-                </a>
-            </article>
-            <article class="restaurant">
-                <a href="menuLaNoteEnchantee.html" class="vignetteNoteEnchantee">
-                    <div class="parentNotifImage"> 
-                        <div class="notifNouveau">Nouveau</div>
-                        <div class="imageNoteEnchantee"></div>
-                    </div>
-                    <div class="parentDetailsVignette">
-                        <div class="TitreIcon">
-                            <div class="titreVignette"><h4>La note enchantée</h4></div>
-                            <div class="iconeCoeur"><i class="fa-regular fa-heart"></i></div>
+                        <div class="parentDetailsVignette">
+                            <div class="TitreIcon">
+                                <div class="titreVignette"><h4>La palette du goût</h4></div>
+                                <div class="iconeCoeur">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                            </div>
+                                <div class="villeVignette">Ménilmontant</div>
                         </div>
-                        <div class="villeVignette">Charonne</div>
-                    </div>
-                </a>
-            </article>
-            <article class="restaurant">
-                <a href="menuAlaFrancaise.html" class="vignetteAlaFrancaise">
-                    <div class="imageAlaFrancaise"></div>
-                    <div class="parentDetailsVignette">
-                        <div class="TitreIcon">
-                            <div class="titreVignette"><h4>À la française</h4></div>
-                            <div class="iconeCoeur"><i class="fa-regular fa-heart"></i></div>
+                    </a>
+                </article>
+                <article class="restaurant">
+                    <a href="menuLaNoteEnchantee.html" class="vignetteNoteEnchantee">
+                        <div class="parentNotifImage2"> 
+                            <div class="notifNouveau2">Nouveau</div>
+                            <div class="imageNoteEnchantee"></div>
                         </div>
-                        <div class="villeVignette">Cité Rouge</div>
-                    </div>
-                </a>
-            </article>
-            <article class="restaurant">
-                <a href="menuLeDeliceDesSens.html" class="vignetteDeliceDesSens">
-                    <div class="imageDeliceDesSens"></div>
-                    <div class="parentDetailsVignette">
-                        <div class="TitreIcon">
-                            <div class="titreVignette"><h4>Le délice des sens</h4></div>
-                            <div class="iconeCoeur"><i class="fa-regular fa-heart"></i></div>
+                        <div class="parentDetailsVignette">
+                            <div class="TitreIcon">
+                                <div class="titreVignette"><h4>La note enchantée</h4></div>
+                                <div class="iconeCoeur">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                            </div>
+                            <div class="villeVignette">Charonne</div>
                         </div>
-                        <div class="villeVignette">Folie-Méricourt</div>
-                    </div>
-                </a>
-            </article>
+                    </a>
+                </article>
+                <article class="restaurant">
+                    <a href="menuAlaFrancaise.html" class="vignetteAlaFrancaise">
+                        <div class="imageAlaFrancaise"></div>
+                        <div class="parentDetailsVignette">
+                            <div class="TitreIcon">
+                                <div class="titreVignette"><h4>À la française</h4></div>
+                                <div class="iconeCoeur">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                            </div>
+                            <div class="villeVignette">Cité Rouge</div>
+                        </div>
+                    </a>
+                </article>
+                <article class="restaurant">
+                    <a href="menuLeDeliceDesSens.html" class="vignetteDeliceDesSens">
+                        <div class="imageDeliceDesSens"></div>
+                        <div class="parentDetailsVignette">
+                            <div class="TitreIcon">
+                                <div class="titreVignette"><h4>Le délice des sens</h4></div>
+                                <div class="iconeCoeur">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                            </div>
+                            <div class="villeVignette">Folie-Méricourt</div>
+                        </div>
+                    </a>
+                </article>
+            </div>
         </section>
     </main>
     <footer>
