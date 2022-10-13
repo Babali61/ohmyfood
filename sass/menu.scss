@@ -1,0 +1,367 @@
+@import "reset/reset.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+@import "styles/variables.scss";
+@import "styles/animation.scss";
+@import "styles/footer.scss";
+
+
+.flecheImage {
+    display: flex; 
+    align-items: center;
+    
+    
+
+        a {
+           
+            font-size: 19px;
+            margin-left: 160% ;
+        }
+
+        img {
+            margin: auto;
+            padding: 5% 0 4% 0;
+            width: 40%;
+        }
+}
+
+main {
+
+    
+
+        img {
+
+            width: 100%;
+            
+            
+
+        }
+}
+
+.menu {
+
+    width: 100%;
+    padding-bottom: 13%;
+    border-radius: 2rem 2rem 0 0;
+    position:relative ;
+    top: -58px;
+    background-color: rgb(243, 242, 242);
+}
+
+.titreIcon {
+
+    display: flex;
+    align-items: center;
+
+        h1 {
+            font-family: $Titres;
+            font-size: 1.7rem;
+            font-weight: 500;
+            padding: 6% 5%;
+            width: 83%;
+        }
+
+        .iconCoeur {
+
+            font-size: 1.8rem;
+
+                i {
+                    position: absolute;
+                    margin-top: -10px;
+                }
+
+        }
+}
+
+.iconCoeur {
+
+    .fa-solid {
+
+        background: linear-gradient($Primaire, $Secondaire);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: 400ms;
+    
+       
+            &:hover {
+               
+                opacity: 1;
+                cursor: pointer;
+            
+                
+            }
+    
+    }
+
+}
+
+.menuEntrees {
+
+    
+	
+        h2 {
+            @extend %TitreMenu;
+        }
+}
+
+
+
+.menuPlats {
+
+        h2 {
+
+            padding-top: 7%;
+            @extend %TitreMenu;
+        }
+}
+
+.menuDesserts {
+
+        h2 {
+            padding-top: 7%;
+            @extend %TitreMenu;
+        }
+}
+
+.bordureBas {
+
+    width: 2.5rem;
+    margin: 0 0 5% 5%;
+    border-bottom: 3px solid #99e2d0;
+}
+
+article {
+
+    width: 92%;
+    height:4.4rem;
+    margin: auto;
+    // background-color: #FFF;
+    margin-bottom: 5%;
+    // padding-left: 3%; 
+    font-family: $Texte;
+    border-radius: 1.1rem;
+     
+    
+}
+
+
+.articleEnfant {
+   
+    width: 100%;
+    background-color: #FFF;
+    position: relative;
+    padding-left: 3%;
+    display: flex;
+    overflow: hidden;
+    border-radius: 1.1rem;
+    box-shadow: $ShadowFonctionnement;
+
+    &:hover {
+
+        .animationArticle {
+            margin-right: 0;
+            overflow: visible;
+        }
+
+        .fa-solid {
+            animation: rotate 0.6s ;
+        } 
+        
+    }
+
+    .prix {
+        padding-right: 6%;
+        margin-left: auto;
+        font-weight: bold;
+        margin-top: auto;
+        padding-bottom: 3%;
+    }
+
+    
+    
+}
+
+.animationArticle {
+
+width: 5rem;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-color: #99e2d0;
+overflow: hidden;
+margin-right: -5rem;
+transition: 0.5s;
+
+
+       
+
+        i {
+            background-color: #FFF;
+            color: #99e2d0;
+            width: 25px;
+            height: 25px;
+            display: grid;
+            align-content: center;
+            border-radius: 50%;
+           
+            
+        }
+
+        
+    
+}
+
+
+.detailsTitre {
+    
+    display: flex;
+    flex-direction: column;
+    padding: 1% 0 4% 0%;
+
+        .details {
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            width: 230px;
+            margin-right: 8%;
+            padding-top: 2%;
+
+        }
+
+        h3 {
+            padding: 3.5% 0% 0 0%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+           
+        }
+        
+}
+
+.bouttonCommander {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;    
+        a {
+            background: radial-gradient(at -90% -100%, $Secondaire 50%, $Primaire 100%);
+            padding: 4.5% 12%;
+            border-radius: 33px;
+            font-family: $Texte;
+            text-decoration: none;
+            color: #FFF;
+            
+
+        }
+}
+
+footer {
+
+    margin-top: -58px;
+}
+
+// Media queries Tablette
+
+@media (min-width : $width1 ) {
+ 
+    // Media queries Tablette Logo header 
+
+        .flecheImage {
+        
+            img {
+
+                padding: 2% 0;
+                width: 20%;
+                        
+                }  
+            }    
+
+        main {
+            
+            width: 90%;
+            margin: auto;
+
+                img {
+                    border-radius: 30px 30px 0 0;
+                    height: 400px;
+                }
+        }
+
+        article {
+            height: 5rem;
+
+                h3 {
+                    padding-top: 2.4%;
+                }
+        }
+
+        .bouttonCommander {
+
+            a {
+                font-size: larger;
+            }
+
+        }
+    }
+
+// Media queries Desktop
+
+@media (min-width : $width2 ) {
+ 
+    // Media queries Desktop Logo header 
+
+        .flecheImage {
+        
+            img {
+
+                padding: 2% 0;
+                width: 10%;
+                        
+                }  
+            }    
+
+        main {
+            
+            width: 100%;
+            margin: auto;
+            background-color: lightgray;
+
+                img {
+                    
+                    border-radius: 0;
+                    height: 600px;
+                    object-fit: cover;
+                }
+        }
+
+        .menu {
+
+            width: 50%;
+            margin: auto;
+            top: 0;
+
+        }
+
+        article {
+            height: auto;
+            margin-top: 4%;
+
+            
+        }
+
+        .detailsTitre {
+
+            padding-top: 2%;
+            padding-bottom: 2%;
+                
+        }
+
+        footer {
+
+            margin-top: 0;
+        }
+
+    }

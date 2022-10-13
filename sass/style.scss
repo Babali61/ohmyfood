@@ -1,82 +1,76 @@
 @import "reset/reset.scss";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+@import "styles/variables.scss";
+@import "styles/footer.scss";
 
-//  Variables
-$Primaire :#9356DC;
-$Secondaire:#FF79DA;
-$Tertiare:#99E2D0;
-$GrisClaireLocal:rgb(234, 234, 234);
-$ShadowTop:-1px -6px 9px 2px rgba(0,0,0,0.49);
-$ShadowFonctionnement :0px 13px 17px -8px rgba(150,150,150,0.29);
-$ShadowRestaurant :0px 13px 17px -8px rgba(0, 0, 0, 0.29);
-$Titres: 'Shrikhand', cursive;
-$Texte: 'Roboto', sans-serif;
+// Partie du loader
 
-// Heritage @extend 
+.loader {
 
-%displayFlexCenter {
-
-    display : flex ;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-// Heritage @extend - Partie Fonctionnement
-
-%BoutonFonctionnement {
-
+    height: 100vh;
+    position:fixed;
     display: flex;
     align-items: center;
-    margin: auto;
-    background-color: rgb(246, 246, 246);
-    width: 85%;
-    height: 4.5rem;
-    border-radius: 1.2rem;
-    box-shadow: $ShadowFonctionnement;
-    margin-bottom: 5%;
-
-}
-
-%NumeroFonctionnement {
-
-    border-radius: 50%;
-    margin-left: -0.6rem;
-    width: 1.5rem;
-    height: 1.5rem;
+    justify-content: center;
     background-color: $Primaire;
-    font-family: $Texte;
-    color: #FFF;
-
-}
-
-%LogoFonctionnement {
-
-    width: 60px;
-    padding: 0 8% 0 6%;
-    color: gray;
-
-}
-
-%TexteBoutonFonctionnement {
-
-    width: 76%;
+    z-index: 1;
+    inset: 0;
+    animation: loading 3s forwards;
     
-    font-family: $Texte;
-    font-weight: bold;
+
+
+        .logo {
+            text-align: center;
+            font-family: $Titres;
+            font-size: 40px;
+            color: $Secondaire;
+            padding-right: 20px;
+        }
 
 }
 
-// Heritage @extend - Partie restaurant
+.iconLoader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 6px solid $Secondaire;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 3rem;
+        border-top: 6px solid transparent;
+        animation: spin 5s infinite linear;
+        color: $Secondaire;
 
+}
 
+@keyframes loading {
+    0%{
+        opacity: 1;
+    }
 
-%ImageStyle {
+    25%{
+        opacity: 1;
+    }
 
-    background-repeat: no-repeat;
-    height: 12rem;
-    border-radius: 1rem 1rem 0 0;
+    50%{
+        opacity: 1;
+    }
 
+    75%{
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden
+    }
+}
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg)
+    }
 }
 
 //  Partie du Header
@@ -164,85 +158,66 @@ header {
 
 }
 
-.boutonChoisir{
+.boutonFonctionnement{
+ 
+    display: flex;
+    align-items: center;
+    margin: auto;
+    background-color: rgb(246, 246, 246);
+    width: 85%;
+    height: 4.5rem;
+    border-radius: 1.2rem;
+    box-shadow: $ShadowFonctionnement;
+    margin-bottom: 5%;
+    &:hover {
+        background-color: #f5edff;
+        i {
+            color: $Primaire;
+        }
+    }
 
-        @extend %BoutonFonctionnement;
-
-            .numeroChoisir {
+            .numeroFonctionnement {
                 
                 @extend %displayFlexCenter;
-                @extend %NumeroFonctionnement;
+                border-radius: 50%;
+                margin-left: -0.6rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                background-color: $Primaire;
+                font-family: $Texte;
+                color: #FFF;
 
             
             }
         
-            .logoChoisir {
+            .logoFonctionnement {
 
-            @extend %LogoFonctionnement;
-
-            }
-
-            .texteChoisir {
-
-                @extend %TexteBoutonFonctionnement;
-
-            }
-}
-
-
-.boutonComposer {
-
-        @extend %BoutonFonctionnement;
-
-            .numeroComposer {
-
-                @extend %displayFlexCenter;
-                @extend %NumeroFonctionnement;
+                width: 60px;
+                padding: 0 8% 0 6%;
+                color: gray;
 
             }
 
-            .logoComposer {
+            .texteFonctionnement {
 
-                @extend %LogoFonctionnement;
+                width: 76%; 
+                font-family: $Texte;
+                font-weight: bold;
 
-            }
-
-
-            .texteComposer {
-
-                @extend %TexteBoutonFonctionnement;
 
             }
 }
 
-.boutonDeguster {
-
-        @extend %BoutonFonctionnement;
-
-            .numeroDeguster {
-
-                @extend %displayFlexCenter;
-                @extend %NumeroFonctionnement;
-            }
-
-            .logoDeguster {
-
-                @extend %LogoFonctionnement;
-
-            }
 
 
-            .texteDeguster {
 
-                @extend %TexteBoutonFonctionnement;
-
-            }
-
-}
+//  Partie Restaurants
 
 .parentRestaurants {
     
     background-color: rgb(243, 242, 242);
+    padding-bottom: 2%;
+    margin-top: 20%;
 
             h2 {
 
@@ -281,26 +256,23 @@ article {
 
 .parentNotifImage {
 
-    height: 100%;
+    
     width: 100%;
     margin: auto;
 
 
         .notifNouveau {
             
-            padding: 1.8% 3%;
-            position: absolute;
-            margin-top: 0.8rem;
-            right: 8%;
-            background-color: #99e2d0;
-            color: #008766;
-            font-family: $Texte;
-            font-weight: 500;
-            border-radius: 3px;
+            @extend %notif
             
 
         }
 
+}
+
+.notifNouveau2 {
+
+    @extend %notif;
 }
 
 .parentDetailsVignette {
@@ -322,21 +294,52 @@ article {
         .titreVignette {
             
             width: 85%;
+            padding-bottom: 1%;
     
         }
 
         .iconeCoeur {
             
             font-size: x-large;
-            
+           
+                i {
+                    position: absolute;
+                    margin-top: -5px;
+                }
         }
 }
+
+.iconeCoeur {
+
+    .fa-solid {
+
+        background: linear-gradient($Primaire, $Secondaire);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: 400ms;
+       
+            &:hover {
+               
+                opacity: 1;
+            
+                
+            }
+    
+    }
+
+}
+
+
+// Partie Image
+
 
 .imagePaletteDuGout {
 
     background-image: url(images/palette.jpg);
-    background-size: 100% 135%;
-    background-position-y: -4rem;
+    background-size:  cover;
+    background-position: 0px -40px;
     @extend %ImageStyle;
     
 }
@@ -344,85 +347,365 @@ article {
 .imageNoteEnchantee {
 
     background-image: url(images/note.jpg);
-    background-size: 100% 250%;
-    background-position-y: -11rem;
+    background-size:  cover;
+    background-position: 0px -50px;
     @extend %ImageStyle;
 }
 
 .imageAlaFrancaise {
 
     background-image: url(images/francaise.jpg);
-    background-size: 100% 125%;
-    background-position-y: -3rem;
+    background-size:  cover;
+    background-position: 0px -50px;
     @extend %ImageStyle;
 }
 
 .imageDeliceDesSens {
 
     background-image: url(images/delice.jpg);
-    background-size: 100% 125%;
-    background-position-y: -3rem;
+    background-size:  cover;
+    background-position: 0px -50px;
     @extend %ImageStyle;
 }
 
-//  Partie Footer
 
-footer {
 
-    background-color: #353535;
-    height: 100%;
-    padding-bottom: 5%;
+//  Media queries Tablette
 
-        .logoFooter {
+@media (min-width : $width1 ) and (max-width : $width2){
 
-            font-family: $Titres;
-            font-size: 16px;
-            color: #FFF;
-            padding: 5% 5%;
+// Media queries tablette Logo header 
+
+    header {
+
+        .imageHeader {
+    
+            @extend %displayFlexCenter;
+                
+             img {
+                 padding: 4% 0;
+                 width: 20%;
+                    
+            }  
+         }    
+           
+    }
+
+// Media queries tablette Partie localisation avec Paris, Belleville
+
+    .LocalReserv {
+
+        width: 80%;
+        margin: auto;
+
+        .parentLocalisation {
+
+            border-radius: 45px 45px 0 0;
+        }
+
+        .parentReservation {
+
+            border-radius: 0 0 45px 45px;
+
         }
 }
 
-.liste {
-    width: 90%;
-    margin: auto;
+// Media queries tablette Partie Fonctionnement
+
+    .parentFonctionnement {
+
+        width: 80%;
+        margin: auto;
+        padding-bottom: 5%;
+
+            .titreFonctionnement {
+
+                text-align: center;
+
+    }
+
 }
 
-li {
+    .boutonFonctionnement {
 
-    margin-bottom: 1%;
+        width: 60%;
 
-        a {
+            .texteFonctionnement {
+
+                
+                text-align: center;
+
+            }
+    }
+
+
+//  Media queries Tablette Partie Restaurants
+
+.parentRestaurants {
+
+    margin-top: 6%;
+
+            h2 {
+
+                font-size: 1.6rem ;
+                padding: 5% 0 3% 0;
+                text-align: center;
+
+            }
+}
+
+article {
+
+    
+    width: 70%;
+   
+}
+
+
+.parentNotifImage {
+
+        .notifNouveau {
+            
+            padding: 1.8% 3%;
+            position: absolute;
+            margin-top: 0.8rem;
+            right: 17%;
+            background-color: #99e2d0;
+            color: #008766;
             font-family: $Texte;
-            font-size: 14px;
-            color: #FFF;
-            text-decoration: none;
+            font-weight: 500;
+            border-radius: 3px;
             
-            
+
         }
 
 }
 
-.iconeLien {
+.notifNouveau2 {
 
-    display: flex;
-    align-items: center;
-    color: #FFF;
+    right: 17%;
+}
+
+// Media queries tablette Partie Image
+
+
+.imagePaletteDuGout {
+
+    
+    background-position: center;
     
     
+}
 
-        .iconeFooter {
-            font-size: x-small;
-            padding-right: 2.5%;
-        }
+.imageNoteEnchantee {
 
-        .iconeFooterDevenir {
+    background-position: center;
+}
 
-            font-size: xx-small;
-            padding-right: 2%;
-        }
+.imageAlaFrancaise {
 
-        .lienFooter {
-            width: 70%;
-        }
+    background-position: center;
+}
+
+.imageDeliceDesSens {
+
+    background-position: center;
+}
+
 
 }
+
+// Media queries Desktop
+
+@media (min-width : $width2 ) {
+ 
+    // Media queries Desktop Logo header 
+
+    header {
+
+        .imageHeader {
+    
+             img {
+                 padding: 2% 0;
+                 width: 10%;
+                    
+            }  
+         }    
+           
+    }
+
+// Media queries Desktop Partie parent localisation et fonctionnement 
+
+    .parentLocalFonct {
+        display: flex;
+    }
+
+    // Media queries Desktop Partie localisation avec Paris, Belleville
+
+    .LocalReserv {
+
+        width: 37%;
+        margin:auto;
+        
+        
+
+        .parentLocalisation {
+
+            border-radius: 45px 45px 0 0;
+        }
+
+        .parentReservation {
+
+            border-radius: 0 0 45px 45px;
+
+        }
+}
+
+// Media queries Desktop Partie Fonctionnement
+
+
+
+    .parentFonctionnement {
+
+        width: 40%;
+        margin: auto;
+        padding-bottom: 2%;
+
+            .titreFonctionnement {
+
+                text-align: center;
+
+    }
+
+}
+
+    .boutonFonctionnement {
+
+        width: 60%;
+        
+
+
+            .logoFonctionnement {
+                width: 30px;
+            }
+          
+            .texteFonctionnement {
+
+                
+                text-align: center;
+
+            }
+    }
+
+
+
+    //  Media queries Desktop Partie Restaurants
+
+    .parentRestaurants {
+
+     margin-top: 5%;
+
+                h2 {
+
+                    font-size: 1.6rem ;
+                    padding: 2% 0 0% 0;
+                    text-align: center;
+
+                }
+                
+    }
+
+    .parentArticle {
+
+        display: flex;
+        flex-wrap: wrap;
+
+        article {
+
+        
+            width: 20%;
+
+        
+        }
+
+    }
+    
+
+
+    .parentNotifImage {
+
+            .notifNouveau {
+                
+                padding: 0.6% 1%;
+                right: 78%;
+
+            }
+
+    }
+
+    .notifNouveau2 {
+        padding: 0.6% 1%;
+        right: 53%;
+    }
+
+    // Media queries Desktop Partie Image
+
+
+    .imagePaletteDuGout {
+
+        
+        background-position: center;
+        
+        
+    }
+
+    .imageNoteEnchantee {
+
+        background-position: center;
+    }
+
+    .imageAlaFrancaise {
+
+        background-position: center;
+    }
+
+    .imageDeliceDesSens {
+
+        background-position: center;
+    }
+
+    // Media queries desktop Partie Footer
+
+    footer {
+
+        padding-bottom: 2%;
+            .logoFooter {
+    
+                padding: 3% 2%;
+                font-size: 22px;
+                text-align: center;
+
+            }
+    }
+
+
+    .liste {
+        width: 100%;
+        
+    }
+    
+    li {
+    
+        margin-left: 45%;
+
+            a {
+                
+                font-size: 17px;
+                
+            }
+    
+    }
+    
+    
+}
+

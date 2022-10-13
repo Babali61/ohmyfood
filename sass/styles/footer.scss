@@ -1,0 +1,103 @@
+//  Variable @media queries taille
+
+$width1 : 768px ;
+$width2 : 968px;
+
+//  Partie Footer
+
+footer {
+
+    background-color: #353535;
+    padding-bottom: 5%;
+
+        .logoFooter {
+
+            font-family: $Titres;
+            font-size: 16px;
+            color: #FFF;
+            padding: 5% 5%;
+        }
+}
+
+.liste {
+    width: 90%;
+    margin: auto;
+}
+
+li {
+
+    margin-bottom: 1%;
+
+        a {
+            font-family: $Texte;
+            font-size: 14px;
+            color: #FFF;
+            text-decoration: none;
+            
+            
+        }
+
+}
+
+.iconeLien {
+
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    
+    
+
+        .iconeFooter {
+            font-size: x-small;
+            padding-right: 2.5%;
+        }
+
+        .iconeFooterDevenir {
+
+            font-size: xx-small;
+            padding-right: 2%;
+        }
+
+        .lienFooter {
+            width: 70%;
+        }
+
+}
+
+@media (min-width : $width2 ) {
+
+    // Media queries desktop Partie Footer
+
+    footer {
+
+        padding-bottom: 2%;
+            .logoFooter {
+
+                padding: 3% 2%;
+                font-size: 22px;
+                text-align: center;
+
+            }
+    }
+
+
+    .liste {
+        width: 100%;
+        
+    }
+
+    li {
+
+        margin-left: 45%;
+
+            a {
+                
+                font-size: 17px;
+                
+            }
+
+    }
+
+}
+
+

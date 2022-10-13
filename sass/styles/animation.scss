@@ -1,0 +1,56 @@
+@keyframes rotate {
+    from {
+      transform: rotate(-360deg)
+    }
+    to {
+      transform: rotate(0deg)
+    }
+  }
+
+  @keyframes mymove { 
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+        
+
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        
+        
+    }
+}
+
+.pop {
+    animation: mymove 1s;
+}
+
+.delais1 {
+
+    animation-delay: 50ms;
+	animation-fill-mode: forwards;
+	opacity:0;
+}
+
+.delais2 {
+
+    animation-delay: 150ms;
+	animation-fill-mode: forwards;
+	opacity:0;
+}
+
+.delais3{
+
+    animation-delay: 250ms;
+	animation-fill-mode: forwards;
+	opacity:0;
+}
+
+.delais4 {
+
+    animation-delay: 350ms;
+	animation-fill-mode: forwards;
+	opacity:0;
+}

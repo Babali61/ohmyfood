@@ -1,0 +1,108 @@
+//  Variables Couleurs
+$Primaire :#9356DC;
+$Secondaire:#FF79DA;
+$Tertiare:#99E2D0;
+$GrisClaireLocal:rgb(234, 234, 234);
+
+//  Variable Ombre
+$ShadowTop:-1px -6px 9px 2px rgba(0,0,0,0.49);
+$ShadowFonctionnement :0px 13px 17px -8px rgba(150,150,150,0.29);
+$ShadowRestaurant :0px 13px 17px -8px rgba(0, 0, 0, 0.29);
+
+//  Variable Titre et texte
+$Titres: 'Shrikhand', cursive;
+$Texte: 'Roboto', sans-serif;
+
+//  Variable @media queries taille
+
+$width1 : 768px ;
+$width2 : 968px;
+// Heritage @extend 
+
+%displayFlexCenter {
+
+    display : flex ;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+// Heritage @extend - Partie Fonctionnement
+
+%BoutonFonctionnement {
+
+    display: flex;
+    align-items: center;
+    margin: auto;
+    background-color: rgb(246, 246, 246);
+    width: 85%;
+    height: 4.5rem;
+    border-radius: 1.2rem;
+    box-shadow: $ShadowFonctionnement;
+    margin-bottom: 5%;
+
+}
+
+%NumeroFonctionnement {
+
+    border-radius: 50%;
+    margin-left: -0.6rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: $Primaire;
+    font-family: $Texte;
+    color: #FFF;
+
+}
+
+%LogoFonctionnement {
+
+    width: 60px;
+    padding: 0 8% 0 6%;
+    color: gray;
+
+}
+
+%TexteBoutonFonctionnement {
+
+    width: 76%; 
+    font-family: $Texte;
+    font-weight: bold;
+
+}
+
+// Heritage @extend - Partie restaurant
+
+%notif {
+
+            padding: 1.8% 3%;
+            position: absolute;
+            margin-top: 0.8rem;
+            right: 8%;
+            background-color: #99e2d0;
+            color: #008766;
+            font-family: $Texte;
+            font-weight: 500;
+            border-radius: 3px;
+}
+
+
+%ImageStyle {
+
+    background-repeat: no-repeat;
+    height: 12rem;
+    border-radius: 1rem 1rem 0 0;
+
+}
+
+//  Héritages Menu 
+
+%TitreMenu {
+
+        font-family: $Texte;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 0 0 1% 5%;
+    
+}
