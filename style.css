@@ -1,0 +1,570 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+.boutonFonctionnement .numeroFonctionnement, .parentLocalisation, header .imageHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notifNouveau2, .parentNotifImage .notifNouveau {
+  padding: 1.8% 3%;
+  position: absolute;
+  margin-top: 0.8rem;
+  right: 8%;
+  background-color: #99e2d0;
+  color: #008766;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  border-radius: 3px;
+}
+
+.imageDeliceDesSens, .imageAlaFrancaise, .imageNoteEnchantee, .imagePaletteDuGout {
+  background-repeat: no-repeat;
+  height: 12rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+footer {
+  background-color: #353535;
+  padding-bottom: 5%;
+}
+footer .logoFooter {
+  font-family: "Shrikhand", cursive;
+  font-size: 16px;
+  color: #FFF;
+  padding: 5% 5%;
+}
+
+.liste {
+  width: 90%;
+  margin: auto;
+}
+
+li {
+  margin-bottom: 1%;
+}
+li a {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.iconeLien {
+  display: flex;
+  align-items: center;
+  color: #FFF;
+}
+.iconeLien .iconeFooter {
+  font-size: x-small;
+  padding-right: 2.5%;
+}
+.iconeLien .iconeFooterDevenir {
+  font-size: xx-small;
+  padding-right: 2%;
+}
+.iconeLien .lienFooter {
+  width: 70%;
+}
+
+@media (min-width: 968px) {
+  footer {
+    padding-bottom: 2%;
+  }
+  footer .logoFooter {
+    padding: 3% 2%;
+    font-size: 22px;
+    text-align: center;
+  }
+  .liste {
+    width: 100%;
+  }
+  li {
+    margin-left: 45%;
+  }
+  li a {
+    font-size: 17px;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes mymove {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes shadowNone {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0px 13px 17px -8px rgba(150, 150, 150, 0.29);
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.pop {
+  animation: mymove 1s;
+}
+
+.delais1 {
+  animation-delay: 50ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.delais2 {
+  animation-delay: 150ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.delais3 {
+  animation-delay: 250ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.delais4 {
+  animation-delay: 350ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.loader {
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9356DC;
+  z-index: 1;
+  inset: 0;
+  animation: loading 3s forwards;
+}
+.loader .logo {
+  text-align: center;
+  font-family: "Shrikhand", cursive;
+  font-size: 40px;
+  color: #FF79DA;
+  padding-right: 20px;
+}
+
+.iconLoader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 6px solid #FF79DA;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 3rem;
+  border-top: 6px solid transparent;
+  animation: spin 5s infinite linear;
+  color: #FF79DA;
+}
+
+header .imageHeader img {
+  padding: 4% 0;
+  width: 40%;
+}
+
+.parentLocalisation {
+  width: 100%;
+  padding: 5% 0%;
+  background-color: rgb(234, 234, 234);
+  box-shadow: inset 0px 2px 5px 2px rgba(0, 0, 0, 0.09);
+}
+.parentLocalisation .logoLocal {
+  padding-right: 4%;
+  margin-left: -6%;
+}
+.parentLocalisation .texteLocal {
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+.parentReservation {
+  height: auto;
+  padding-top: 8%;
+  padding-bottom: 17%;
+  text-align: center;
+  background-color: rgb(246, 246, 246);
+}
+.parentReservation .titreReservation {
+  padding: 2% 16%;
+  font-size: 15px;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+}
+.parentReservation .infoReservation {
+  font-family: "Roboto", sans-serif;
+  padding: 1% 4%;
+}
+.parentReservation .parentBoutonExplorer {
+  margin-top: 12%;
+}
+.parentReservation .parentBoutonExplorer .boutonExplorer {
+  background: radial-gradient(at -90% -100%, #FF79DA 50%, #9356DC 100%);
+  padding: 4.5% 6%;
+  margin-top: 5%;
+  border-radius: 33px;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  color: #FFF;
+}
+
+.titreFonctionnement {
+  font-family: "Roboto", sans-serif;
+  padding: 9% 5%;
+}
+
+.boutonFonctionnement {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  background-color: rgb(246, 246, 246);
+  width: 85%;
+  height: 4.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0px 13px 17px -8px rgba(150, 150, 150, 0.29);
+  margin-bottom: 5%;
+}
+.boutonFonctionnement:hover {
+  background-color: #f5edff;
+}
+.boutonFonctionnement:hover i {
+  color: #9356DC;
+}
+.boutonFonctionnement .numeroFonctionnement {
+  border-radius: 50%;
+  margin-left: -0.6rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #9356DC;
+  font-family: "Roboto", sans-serif;
+  color: #FFF;
+}
+.boutonFonctionnement .logoFonctionnement {
+  width: 60px;
+  padding: 0 8% 0 6%;
+  color: gray;
+}
+.boutonFonctionnement .texteFonctionnement {
+  width: 76%;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.parentRestaurants {
+  background-color: rgb(243, 242, 242);
+  padding-bottom: 2%;
+  margin-top: 20%;
+}
+.parentRestaurants h2 {
+  font-size: 1.36rem;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+  padding: 10% 0% 3% 4%;
+}
+
+article {
+  width: 90%;
+  margin: 3% auto 4% auto;
+  background-color: #FFF;
+  border-radius: 1rem;
+}
+article a {
+  text-decoration: none;
+  color: #000;
+}
+
+.restaurant {
+  box-shadow: 0px 13px 17px -8px rgba(150, 150, 150, 0.29);
+}
+
+.parentNotifImage {
+  width: 100%;
+  margin: auto;
+}
+.parentDetailsVignette {
+  width: 100%;
+  margin: auto;
+  padding: 3% 0% 4% 4%;
+  font-family: "Roboto", sans-serif;
+}
+
+.TitreIcon {
+  display: flex;
+  align-items: center;
+}
+.TitreIcon .titreVignette {
+  width: 85%;
+  padding-bottom: 1%;
+}
+.TitreIcon .iconeCoeur {
+  font-size: x-large;
+}
+.TitreIcon .iconeCoeur i {
+  position: absolute;
+  margin-top: -5px;
+}
+
+.iconeCoeur .fa-solid {
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: 400ms;
+}
+.iconeCoeur .fa-solid:hover {
+  opacity: 1;
+}
+
+.imagePaletteDuGout {
+  background-image: url(images/palette.jpg);
+  background-size: cover;
+  background-position: 0px -40px;
+}
+
+.imageNoteEnchantee {
+  background-image: url(images/note.jpg);
+  background-size: cover;
+  background-position: 0px -50px;
+}
+
+.imageAlaFrancaise {
+  background-image: url(images/francaise.jpg);
+  background-size: cover;
+  background-position: 0px -50px;
+}
+
+.imageDeliceDesSens {
+  background-image: url(images/delice.jpg);
+  background-size: cover;
+  background-position: 0px -50px;
+}
+
+@media (min-width: 768px) and (max-width: 968px) {
+  header .imageHeader img {
+    padding: 4% 0;
+    width: 20%;
+  }
+  .LocalReserv {
+    width: 80%;
+    margin: auto;
+  }
+  .LocalReserv .parentLocalisation {
+    border-radius: 45px 45px 0 0;
+  }
+  .LocalReserv .parentReservation {
+    border-radius: 0 0 45px 45px;
+  }
+  .parentFonctionnement {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 5%;
+  }
+  .parentFonctionnement .titreFonctionnement {
+    text-align: center;
+  }
+  .boutonFonctionnement {
+    width: 60%;
+  }
+  .boutonFonctionnement .texteFonctionnement {
+    text-align: center;
+  }
+  .parentRestaurants {
+    margin-top: 6%;
+  }
+  .parentRestaurants h2 {
+    font-size: 1.6rem;
+    padding: 5% 0 3% 0;
+    text-align: center;
+  }
+  article {
+    width: 70%;
+  }
+  .parentNotifImage .notifNouveau {
+    padding: 1.8% 3%;
+    position: absolute;
+    margin-top: 0.8rem;
+    right: 17%;
+    background-color: #99e2d0;
+    color: #008766;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    border-radius: 3px;
+  }
+  .notifNouveau2 {
+    right: 17%;
+  }
+  .imagePaletteDuGout {
+    background-position: center;
+  }
+  .imageNoteEnchantee {
+    background-position: center;
+  }
+  .imageAlaFrancaise {
+    background-position: center;
+  }
+  .imageDeliceDesSens {
+    background-position: center;
+  }
+}
+@media (min-width: 968px) {
+  header .imageHeader img {
+    padding: 2% 0;
+    width: 10%;
+  }
+  .parentLocalFonct {
+    display: flex;
+  }
+  .LocalReserv {
+    width: 37%;
+    margin: auto;
+  }
+  .LocalReserv .parentLocalisation {
+    border-radius: 45px 45px 0 0;
+  }
+  .LocalReserv .parentReservation {
+    border-radius: 0 0 45px 45px;
+  }
+  .parentFonctionnement {
+    width: 40%;
+    margin: auto;
+    padding-bottom: 2%;
+  }
+  .parentFonctionnement .titreFonctionnement {
+    text-align: center;
+  }
+  .boutonFonctionnement {
+    width: 60%;
+  }
+  .boutonFonctionnement .logoFonctionnement {
+    width: 30px;
+  }
+  .boutonFonctionnement .texteFonctionnement {
+    text-align: center;
+  }
+  .parentRestaurants {
+    margin-top: 5%;
+  }
+  .parentRestaurants h2 {
+    font-size: 1.6rem;
+    padding: 2% 0 0% 0;
+    text-align: center;
+  }
+  .parentArticle {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .parentArticle article {
+    width: 20%;
+  }
+  .parentNotifImage .notifNouveau {
+    padding: 0.6% 1%;
+    right: 78%;
+  }
+  .notifNouveau2 {
+    padding: 0.6% 1%;
+    right: 53%;
+  }
+  .imagePaletteDuGout {
+    background-position: center;
+  }
+  .imageNoteEnchantee {
+    background-position: center;
+  }
+  .imageAlaFrancaise {
+    background-position: center;
+  }
+  .imageDeliceDesSens {
+    background-position: center;
+  }
+  footer {
+    padding-bottom: 2%;
+  }
+  footer .logoFooter {
+    padding: 3% 2%;
+    font-size: 22px;
+    text-align: center;
+  }
+  .liste {
+    width: 100%;
+  }
+  li {
+    margin-left: 45%;
+  }
+  li a {
+    font-size: 17px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
