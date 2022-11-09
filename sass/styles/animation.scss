@@ -33,7 +33,35 @@
     }
 }
 
+@keyframes loading {
+    0%{
+        opacity: 1;
+    }
 
+    25%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    75%{
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden
+    }
+}
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg)
+    }
+}
 
 .pop {
     animation: mymove 1s;

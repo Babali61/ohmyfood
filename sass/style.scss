@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 @import "styles/variables.scss";
 @import "styles/footer.scss";
+@import "styles/animation.scss";
 
 // Partie du loader
 
@@ -43,35 +44,7 @@
 
 }
 
-@keyframes loading {
-    0%{
-        opacity: 1;
-    }
 
-    25%{
-        opacity: 1;
-    }
-
-    50%{
-        opacity: 1;
-    }
-
-    75%{
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        visibility: hidden
-    }
-}
-
-@keyframes spin {
-
-    to {
-        transform: rotate(360deg)
-    }
-}
 
 //  Partie du Header
 
