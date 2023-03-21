@@ -181,8 +181,8 @@ li a {
     font-size: 17px;
   }
 }
-article:nth-child(1) {
-  animation-delay: 1s;
+body {
+  background-color: #FFF;
 }
 
 .flecheImage {
@@ -303,7 +303,6 @@ article {
   background-color: #99e2d0;
   overflow: hidden;
   margin-right: -5rem;
-  transition: 0.5s;
 }
 .animationArticle i {
   background-color: #FFF;

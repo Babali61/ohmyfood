@@ -120,6 +120,87 @@ li a {
     font-size: 17px;
   }
 }
+@keyframes rotate {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes mymove {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes shadowNone {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0px 13px 17px -8px rgba(150, 150, 150, 0.29);
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.pop {
+  animation: mymove 1s;
+}
+
+.delais1 {
+  animation-delay: 50ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.delais2 {
+  animation-delay: 150ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.delais3 {
+  animation-delay: 250ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.delais4 {
+  animation-delay: 350ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+body {
+  background-color: #FFF;
+}
+
 .loader {
   height: 100vh;
   position: fixed;
@@ -152,29 +233,6 @@ li a {
   color: #FF79DA;
 }
 
-@keyframes loading {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
 header .imageHeader img {
   padding: 4% 0;
   width: 40%;

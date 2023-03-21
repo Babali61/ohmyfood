@@ -4,6 +4,9 @@
 @import "styles/animation.scss";
 @import "styles/footer.scss";
 
+body {
+    background-color: #FFF;
+}
 
 .flecheImage {
     display: flex; 
@@ -207,7 +210,7 @@ text-align: center;
 background-color: #99e2d0;
 overflow: hidden;
 margin-right: -5rem;
-transition: 0.5s;
+// transition: 0.5s;
 
 
        
